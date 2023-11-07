@@ -44,7 +44,7 @@ header{
 }
 /* regole container */
 .main-content{
-    
+    height: calc(100vh - 75px);
     overflow: auto;
 }
 .top-content{
@@ -65,4 +65,27 @@ header{
     margin: 10px;
     height: 150px;
     background-color: red;
+}
+.main content, .col-full{
+    width: calc(100% - 20px);
+    margin: 10px;
+    height: 50px;
+    background-color: red;
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width: 768px){
+    #sidebar{
+        width: 200px;
+    }
+}
+@media screen and (min-width: 991px){
+    .main content, .col{
+        width: calc(100% / 4 - 20px);
+    }
+}
+@media screen and (min-width: 1200px){
+    .main content, .col{
+        width: calc(100% / 6 - 20px);
+    }
 }
