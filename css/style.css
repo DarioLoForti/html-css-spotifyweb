@@ -12,6 +12,18 @@
 .f-wrap{
     flex-wrap: wrap;
 }
+.d-column{
+    flex-direction: column;
+}
+.j-end{
+    justify-content: end;
+}
+.a-content{
+    align-content: end;
+}
+.j-bet{
+    justify-content: space-between;
+}
 
 /* ID */
 #bottom{
@@ -28,12 +40,17 @@
 #main{
     width: calc(100vw - 50px);
     background-color: #141922;
+    position: fixed;
+    right: 0;
 }
 
 #sidebar{
     width: 50px;
     height: calc(100vh - 75px);
     background-color: black;
+    position: fixed;
+    z-index: 1;
+    left: 0;
 }
 
 header{
@@ -50,6 +67,7 @@ header{
 .main-content{
     height: calc(100vh - 75px);
     overflow: auto;
+        
 }
 .top-content{
     display: flex;
@@ -58,11 +76,16 @@ header{
 }
 .container{
     width: 100%;
-    margin-top: 75px;
+    height: 100%;
 }
 .row{
     display: flex;
     flex-wrap: wrap;
+}
+.row-s{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
 }
 .main content, .col{
     width: calc(100% / 2 - 20px);
@@ -86,6 +109,7 @@ header>button{
 .col-full>ul{
     justify-content: space-around;
     list-style-type: none;
+    margin-top: 75px;
 }
 .col-full>h2{
     color: white;
@@ -109,13 +133,62 @@ li{
 .circle>img{
     border-radius: 50%;
 }
+.col-25{
+    height: calc(100% / 2);
+    width: 100%;
+}
+.col-30{
+    width: 30%;
+}
+.col-40{
+    width: 40%;
+}
+.col-50{
+    height: 50%;
+    width: 100%;
+}
+.col-25>img{
+    width: 100%;
+    padding:5px 10px
+}
+.col-30>img{
+    width: 30%;
+}
+.after{
+    display: none;
+}
+.col-50>h4{
+    color: white;
+}
+.col-50>ul{
+    list-style-type: none;
+}
+li:hover{
+    color: white;
+    font-weight: 800;
+}
 /* MEDIA QUERY */
 @media screen and (min-width: 768px){
     #sidebar{
         width: 200px;
     }
+    #main{
+        width: calc(100vw - 200px);
+    }
+    .col-25{
+        height: calc(50% / 2);
+        width: 100%;
+    }
+    .after{
+        display: block;
+    }
+    .col-25>img{
+        width: 25%;
+        padding:5px 10px
+    }
 }
 @media screen and (min-width: 991px){
+   
     .main content, .col{
         width: calc(100% / 4 - 20px);
     }
