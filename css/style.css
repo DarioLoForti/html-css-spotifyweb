@@ -9,7 +9,9 @@
 .d-flex{
     display: flex;
 }
-
+.f-wrap{
+    flex-wrap: wrap;
+}
 
 /* ID */
 #bottom{
@@ -41,6 +43,8 @@ header{
     position: fixed;
     top:0;
     right: 0;
+    justify-content: end;
+    align-items: center;
 }
 /* regole container */
 .main-content{
@@ -69,10 +73,27 @@ header{
 .main content, .col-full{
     width: calc(100% - 20px);
     margin: 10px;
-    height: 50px;
-    background-color: red;
+    /* background-color: red; */
+}
+header>button{
+    border: 1 px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 40px;
+}
+.col-full>ul{
+    justify-content: space-around;
+    list-style-type: none;
+}
+.col-full>h2{
+    color: white
 }
 
+li{
+    margin: 10px;
+    color: lightgray;
+}
 /* MEDIA QUERY */
 @media screen and (min-width: 768px){
     #sidebar{
