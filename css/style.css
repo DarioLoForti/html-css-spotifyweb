@@ -66,6 +66,7 @@
     position: fixed;
     z-index: 1;
     left: 0;
+    padding-left: 10px;
 }
 
 header{
@@ -114,7 +115,7 @@ header{
     justify-content: center;
 }
 header>button{
-    border: 1 px solid white;
+    border: 1px solid white;
     background-color: transparent;
     color: white;
     border-radius: 25px;
@@ -164,6 +165,7 @@ li{
 }
 .col-20{
     width: calc(50% / 2);
+    color: white;
 }
 .col-60{
     width: 60%;
@@ -175,6 +177,23 @@ li{
 .image{
     height: 75px;
     width: 50%;
+}
+.plus{
+    margin-top: 10px;
+    position: relative;
+}
+.i-plus{
+    width: 40px;
+    height: 40px;
+    background-color: lightgrey;
+}
+.i-plus>i{
+    position: absolute;
+    top:20px;
+    left: 10px;
+}
+.t-plus{
+    padding: 10px;
 }
 .text{
     height: 75px;
@@ -201,9 +220,19 @@ button:hover{
     padding: 15px 50px;
     font-weight: 900;
 }
-.col:hover img{
+.img-cont:hover img{
     opacity: 0.5;
     background-image: ;
+}
+.img-cont:hover .img-overlay{
+    display: block;
+
+}
+.img-cont{
+    width: 100%;
+}
+.img-cont>img{
+    width: 100%;
 }
 .col-30>i{
     margin: 10px;
@@ -256,11 +285,125 @@ i:hover{
     color: white;
     font-size: 15px;
 }
+.t-plus>p{
+    color: lightgray;
+}
+.list{
+    height: 250px;
+    overflow-y: auto;
+}
+.list>ul{
+    list-style: none;
+}
+.img-cont{
+    width: 100%;
+    position: relative;
+}
+.img-overlay{
+    position: absolute;
+    width: 50%;
+    display: none;
+    top: 25%;
+    left: 25%;
+}
+.home, .search, .libreria{
+    width: 200px;
+    align-items: center;
+    margin-top: 10px;
+    height: calc(50% / 3);
+    display: none;
+}
+.download, .user{
+    width: 200px;
+    align-items: center;
+    margin-top: 10px;
+    height: calc(50% / 2);
+    display: none;
+}
+.home>img{
+    width: 20%;
+}
+.home>p{
+    width: 70%;
+    color: white;
+}
+.search>img{
+    width: 20%;
+}
+.search>p{
+    width: 70%;
+    color: white;
+}
+.libreria>img{
+    width: 20%;
+}
+.libreria>p{
+    width: 70%;
+    color: white;
+}
+.download>img{
+    width: 20%;
+}
+.download>p{
+    width: 70%;
+    color: white;
+}
+.user>img{
+    width: 20%;
+}
+.user>p{
+    width: 70%;
+    color: white;
+}
+.before{
+    width: 50px; 
+}
+.before>img{
+    width: 50%;
+}
+.home>p:hover{
+    font-weight: 900;
+}
+.search>p:hover{
+    font-weight: 900;
+}
+.libreria>p:hover{
+    font-weight: 900;
+}
+.download>p:hover{
+    font-weight: 900;
+}
+.user>p:hover{
+    font-weight: 900;
+}
+.t-plus>p:hover{
+    font-weight: 900;
+}
+.libreria{
+    margin-bottom: 20px;
+}
+/* .col{
+    position: relative;
+    top: 0;
+    left: 0;
+} */
+/* .hover{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 50%;
+} */
+
 /* .col-40:hover i{
     color: white;
     font-weight: 700;
 } */
 /* MEDIA QUERY */
+/* @media screen and (min-height: 505px){
+    .overflow{
+        overflow:scroll;
+    }
+} */
 @media screen and (min-width: 768px){
     #sidebar{
         width: 200px;
@@ -278,6 +421,12 @@ i:hover{
     .col-25>img{
         width: 25%;
         padding:5px 10px
+    }
+    .before{
+        display: none;
+    }
+    .home, .search, .libreria, .download, .user{
+        display: flex;
     }
 }
 @media screen and (min-width: 991px){
